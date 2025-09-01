@@ -1,103 +1,131 @@
-import Image from "next/image";
+import Link from "next/link";
+import EmailCopy from "./components/EmailCopy";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="flex flex-col justify-between text-white no-scrollbar scroll-smooth gap-8 p-4 sm:p-8 w-full sm:w-full">
+      <div className="w-full sm:w-80 flex flex-col gap-4 sm:gap-3 z-10">
+        <div className="flex flex-col gap-0">
+          <h1>vedant</h1>
+          <p className="text-yves-pale">bergamo, italy</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="flex flex-col gap-4">
+          <p>
+            ixd student at{" "}
+            <a
+              className="blue-link"
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://ciid.dk"
+            >
+              ciid.dk
+            </a>
+            . previously built things at{" "}
+            <a
+              className="blue-link"
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://www.ycombinator.com/companies/groww"
+            >
+              groww.in
+            </a>
+            . i'm an art history nerd, an amateur{" "}
+            <a
+              className="blue-link"
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://www.instagram.com/arcadefiredump"
+            >
+              photographer
+            </a>{" "}
+            and an athlete.
+          </p>
+          <p>
+            get in touch:{" "}
+            <a
+              className="blue-link"
+              href="https://x.com/vxdxxt"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              x.com
+            </a>{" "}
+            or email <EmailCopy email="hello@vedantja.in" />
+          </p>
+        </div>
+      </div>
+
+      <div className="w-full flex flex-col gap-4 sm:gap-12">
+        <div className="flex flex-col gap-2 z-10">
+          <p className="text-yves-pale">projects</p>
+          <div className="flex flex-col gap-2">
+            <Link className="w-fit" href="/project/block">
+              <div className="flex flex-col gap-1">
+                <div>
+                  <h2>block</h2>
+                </div>
+              </div>
+            </Link>
+            <Link className="w-fit" href="/project/knob">
+              <div className="flex flex-col gap-1">
+                <div>
+                  <h2>knob</h2>
+                </div>
+              </div>
+            </Link>
+            <Link className="w-fit" href="/project/rock-music">
+              <div className="flex flex-col gap-1">
+                <div>
+                  <h2>rock-music</h2>
+                </div>
+              </div>
+            </Link>
+            <Link className="w-fit" href="/project/on-sight">
+              <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1">
+                  <h2>on-sight</h2>
+                </div>
+              </div>
+            </Link>
+            <Link className="w-fit" href="/project/painting">
+              <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1">
+                  <h2>painting</h2>
+                </div>
+              </div>
+            </Link>
+            <Link className="w-fit" href="/work/transactions">
+              <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1">
+                  <p>transaction journeys</p>
+                </div>
+              </div>
+            </Link>
+            <Link className="w-fit" href="/work/qr">
+              <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1">
+                  <p>qr codes</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full sm:w-128 flex flex-col z-10">
+        <p>
+          if you have some spare time:{" "}
+          <a
+            className="blue-link"
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://youtu.be/UD2VcSmGrSc"
+          >
+            youtube.com
+          </a>
+        </p>
+        <p className="text-yves-pale">updated august, 2025</p>
+      </div>
+    </main>
   );
 }
